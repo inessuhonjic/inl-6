@@ -47,7 +47,8 @@ const [rating, setRating] = useState ("")
         rating={rating}
         onTitleChange={(e) => setTitle(e.target.value)}
         onRatingChange={(e) => setRating(e.target.value)}
-       onAddMovie={handleAddMovie}/> 
+       onAddMovie={handleAddMovie}
+       /> 
       <hr />
 
       <h2 className ="text font-bold mb-4 text-gray-500 md:text-right md:mb-0 pr-4">Filmer</h2> 

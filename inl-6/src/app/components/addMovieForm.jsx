@@ -12,7 +12,7 @@ const AddMovie = ({ title, rating, onAddMovie, onRatingChange, onTitleChange }) 
       <form className="w-full max-w-sm" method="post" onSubmit={handleSubmit}>
         <div className="md:flex md:items-center mb-1">
           <div className="inline-block relative w-64">
-            <label className=" text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="titleField">
+            <label className=" text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" htmlFor="titleField">
               Titel:
             </label>
           </div>
@@ -32,7 +32,7 @@ const AddMovie = ({ title, rating, onAddMovie, onRatingChange, onTitleChange }) 
 
 
         <div className="inline-block relative w-64 mb-6">
-          <label className=" text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" for="ratingField">Betyg:</label>
+          <label className=" text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4" htmlFor="ratingField">Betyg:</label>
           <select className="bg-white appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
             type="text"
             id="ratingField"
