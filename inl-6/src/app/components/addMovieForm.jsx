@@ -26,6 +26,7 @@ function Form ({title, rating, onAddMovie, onRatingChange, onTitleChange}) {
             className="form-control"
             value={rating}
             onChange={onRatingChange}
+            required
             >
                 <option value="0">Välj betyg här...</option>
                 <option value="1">1</option>

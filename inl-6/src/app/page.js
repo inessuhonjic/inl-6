@@ -11,16 +11,29 @@ export default function Home() {
   const [movies, setMovies] = useState([]);
   const [rating, setRating] = useState("");
   const [title, setTitle] = useState("");
-  
+  const newMovie = "";
   const handleAddMovie = () => {
-    const newMovie = {
-      title: title,
-      rating: rating
-    };
+    
+    if (title != "" && rating != 0) {
+
+      const newMovie = {
+        title: title,
+        rating: rating
+      };
+
     setMovies([...movies, newMovie]);
 
     setTitle("");
     setRating("");
+
+
+    } else {
+      alert("Ojdå, fyll i alla fält!")
+    }
+      
+
+    
+    
   };
 
   const handleRemoveMovie = (index) => {
