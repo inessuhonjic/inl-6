@@ -8,7 +8,7 @@ const MovieList = ({ movies }) => {
       <p>
         {movie.rating &&
           Array.from({ length: movie.rating }, (_, i) => (
-            <img key={i} src="inl-6/src/app/images/star.png" alt="star"/>
+            <img key={i} src="/images/star.png" alt="star"/>
           ))}
       </p>
     </div>
