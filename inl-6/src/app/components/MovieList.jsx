@@ -6,10 +6,11 @@ const MovieList = ({ movies }) => {
         <div key={index}>
       <h3>{movie.title}</h3>
       <p>
-        {movie.rating &&
+        <span>{movie.rating &&
           Array.from({ length: movie.rating }, (_, i) => (
             <img key={i} src="/images/star.png" alt="star"/>
           ))}
+          </span>
       </p>
     </div>
     ))}
