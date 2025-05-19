@@ -13,7 +13,9 @@ export default function Home() {
   const [title, setTitle] = useState("");
   const newMovie = "";
   const handleAddMovie = () => {
-    
+    /*
+    kollar så att användaren fyllt i både titel och betyg
+    */
     if (title != "" && rating != 0) {
 
       const newMovie = {
@@ -39,6 +41,10 @@ export default function Home() {
   };
   
   const sortByABC = () => {
+    /*
+    skapar en kopia av filmlistan och sorterar den 
+    med hjälp av bubble sorting. 
+    */
     const sorted = [...movies].sort((a,b) => {
     let titleA = a.title.toUpperCase();
     let titleB = b.title.toUpperCase();
@@ -57,6 +63,9 @@ export default function Home() {
 
 
    const sortByRating= () => {
+    /*
+    skapar en kopia av movies och sorterar den efter betyg.
+    */
     const sorted = [...movies].sort((a,b) => b.rating - a.rating);
     setMovies(sorted);
   };
@@ -73,15 +82,8 @@ export default function Home() {
       onAddMovie={handleAddMovie}
       /> 
         <MovieList movies={movies} onRemoveMovie={handleRemoveMovie} />
-        <div className="row justify-content-center">
-        <div className="col-6 mb-3 mt-2"><Button text="Sortera Alfabetiskt" onClick={sortByABC} /></div>
-        <div className="col-6 mb-3 mt-2"><Button text="Sortera efter betyg" onClick={sortByRating} /></div>
-        </div>
-        
-        
-        
-      
-      
+        <Button text="Sortera Alfabetiskt" onClick={sortByABC} />
+        <Button text="Sortera efter betyg" onClick={sortByRating} />
     </div>
 
   );

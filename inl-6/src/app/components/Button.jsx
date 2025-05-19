@@ -1,8 +1,8 @@
 "use client";
-
+//en Button-komponent med text och onClick som props. Återanvändbar.
 const Button = ({ text, onClick }) => {
   return (
-    <button className="btn btn-primary" onClick={onClick}>
+    <button className="btn btn-primary me-2 ms-4" onClick={onClick}>
         {text}
     </button>
   );
