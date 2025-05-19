@@ -5,12 +5,11 @@ function Form () {
     <div className="">
     <form>
         <fieldset>
-            <label for="title-field">Titel:</label>
-            <input type="text" id="title-field" class="form-control" />
+            <label htmlFor="title-field">Titel:</label>
+            <input type="text" id="title-field" className="form-control" />
 
-            <label for="rating-field">Betyg:</label>
-
-            <select type="text" id="rating-field" class="form-control">
+            <label htmlFor="rating-field">Betyg:</label>
+            <select type="text" id="rating-field" className="form-control">
                 <option value="0">Välj betyg här...</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
