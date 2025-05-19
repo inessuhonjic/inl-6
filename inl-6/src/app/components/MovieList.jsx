@@ -1,5 +1,5 @@
 'use client';
-const MovieList = ({ movies }) => {
+const MovieList = ({ movies, onRemoveMovie }) => {
     return (
     <div>
         {movies.map((movie, index) => (
@@ -11,8 +11,11 @@ const MovieList = ({ movies }) => {
             <img key={i} src="/images/star.png" alt="star"/>
           ))}
           </span>
-          
-          <span><img src="/images/delete.png" alt="delete"/></span>
+
+          <span><img src="/images/delete.png" 
+          alt="delete"
+          onClick={() => onRemoveMovie(index)}
+          /></span>
       </p>
     </div>
     ))}

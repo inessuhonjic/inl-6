@@ -22,6 +22,12 @@ export default function Home() {
     setTitle("");
     setRating("");
   };
+
+  const handleRemoveMovie = (index) => {
+    // Filtrera bort filmen som matchar indexet
+    const updatedMovies = movies.filter((movie, i) => i !== index);
+    setMovies(updatedMovies);
+  };
   
   
   return (
@@ -37,7 +43,7 @@ export default function Home() {
       onAddMovie={handleAddMovie}
       /> 
       <Button text="I'm a button" onClick={() => {alert("Clicked!")}} />
-      <MovieList movies={movies} />
+      <MovieList movies={movies} onRemoveMovie={handleRemoveMovie} />
     </div>
 
   );
