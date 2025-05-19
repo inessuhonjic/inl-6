@@ -2,9 +2,6 @@
 
 import 'bootstrap/dist/css/bootstrap.css';
 import Form from  './components/addMovieForm'
-"use client";
-
-import 'bootstrap/dist/css/bootstrap.css';
 import Button from './components/Button'
 
 
@@ -14,10 +11,7 @@ export default function Home() {
       <h1 className="text-center">Min filmlista</h1>
       <h2 className="text-center">Lägg till en film</h2>
       <hr></hr>
-      <Form />
-      <MyButton />
-  
-      <h1>Hello World!</h1>
+      <Form /> 
       <Button text="I'm a button" onClick={() => alert("Clicked!")} />
     </div>
 
