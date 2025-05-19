@@ -34,9 +34,12 @@ const [rating, setRating] = useState ("")
   return (
     <div className ="flex flex-col items-center">
 
-      <h1 className ="text-2xl font-bold mb-4">Min filmlista</h1>
+      <h1 className ="text-2xl font-bold m- text-gray-500 md:text-right mb-1 md:mb-0 pr-4">Min filmlista</h1>
 
-      <h2 className ="text font-bold mb-4">Lägg till film </h2>
+      <h2 className ="text font-bold mb-4  text-gray-500 md:text-right md:mb-0 pr-4">Lägg till film </h2>
+      <hr className="w-1/2 border-t border-gray-300 my-4" />
+
+      
       
       
       <AddMovie 
@@ -47,8 +50,9 @@ const [rating, setRating] = useState ("")
        onAddMovie={handleAddMovie}/> 
       <hr />
 
-      <h2 className ="text font-bold mb-4">Filmer</h2> 
+      <h2 className ="text font-bold mb-4 text-gray-500 md:text-right md:mb-0 pr-4">Filmer</h2> 
       <hr />
+      
       <ul>
         
     {movies.map((movie, index) => (
