@@ -35,7 +35,7 @@ function Form ({title, rating, onAddMovie, onRatingChange, onTitleChange}) {
                 <option value="4">4</option>
                 <option value="5">5</option>
             </select>
-            <button className="btn btn-success" type="submit">Lägg till en film!</button>
+            <button className="btn btn-success m-3" type="submit">Lägg till en film!</button>
         </fieldset>
     </form>
     </div>
