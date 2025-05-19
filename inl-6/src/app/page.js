@@ -1,11 +1,12 @@
+"use client";
+
 import 'bootstrap/dist/css/bootstrap.css';
 import Form from  './components/addMovieForm'
+"use client";
 
-function MyButton() {
-  return ( 
-    <button className="btn btn-primary">I'm a button</button>
-  );
-}
+import 'bootstrap/dist/css/bootstrap.css';
+import Button from './components/Button'
+
 
 export default function Home() {
   return (
@@ -15,10 +16,10 @@ export default function Home() {
       <hr></hr>
       <Form />
       <MyButton />
+    <div>
+      <h1>Hello World!</h1>
+      <Button text="I'm a button" onClick={() => alert("Clicked!")} />
     </div>
 
   );
 }
-
-
-
