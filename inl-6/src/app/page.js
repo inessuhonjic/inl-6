@@ -1,7 +1,8 @@
+import 'bootstrap/dist/css/bootstrap.css';
 
 function MyButton() {
   return ( 
-    <button>I'm a button</button>
+    <button className="btn btn-primary">I'm a button</button>
   );
 }
 
@@ -11,7 +12,7 @@ export default function Home() {
       <h1>Hello World!</h1>
       <MyButton />
     </div>
-       
+
   );
 }
 
