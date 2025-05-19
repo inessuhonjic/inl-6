@@ -16,7 +16,7 @@ export default function Home() {
       <hr></hr>
       <Form />
       <MyButton />
-    <div>
+  
       <h1>Hello World!</h1>
       <Button text="I'm a button" onClick={() => alert("Clicked!")} />
     </div>
