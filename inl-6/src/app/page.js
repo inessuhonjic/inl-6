@@ -1,20 +1,15 @@
-import 'bootstrap/dist/css/bootstrap.css';
+"use client";
 
-function MyButton() {
-  return ( 
-    <button className="btn btn-primary">I'm a button</button>
-  );
-}
+import 'bootstrap/dist/css/bootstrap.css';
+import Button from './components/Button'
+
 
 export default function Home() {
   return (
     <div>
       <h1>Hello World!</h1>
-      <MyButton />
+      <Button text="I'm a button" onClick={() => alert("Clicked!")} />
     </div>
 
   );
 }
-
-
-
