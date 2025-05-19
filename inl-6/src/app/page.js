@@ -73,10 +73,10 @@ export default function Home() {
       onAddMovie={handleAddMovie}
       /> 
         <MovieList movies={movies} onRemoveMovie={handleRemoveMovie} />
-        <div className="row justify-content-center">
-        <div className="col-6 mb-3 mt-2"><Button text="Sortera Alfabetiskt" onClick={sortByABC} /></div>
-        <div className="col-6 mb-3 mt-2"><Button text="Sortera efter betyg" onClick={sortByRating} /></div>
-        </div>
+        
+        <Button text="Sortera Alfabetiskt" onClick={sortByABC} />
+        <Button text="Sortera efter betyg" onClick={sortByRating}/>
+        
         
         
         
