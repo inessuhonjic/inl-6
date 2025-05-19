@@ -3,6 +3,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import Form from  './components/addMovieForm'
 import Button from './components/Button'
+import Movie from './components/Movie'
 
 
 export default function Home() {
