@@ -82,8 +82,15 @@ export default function Home() {
       onAddMovie={handleAddMovie}
       /> 
         <MovieList movies={movies} onRemoveMovie={handleRemoveMovie} />
+        
         <Button text="Sortera Alfabetiskt" onClick={sortByABC} />
-        <Button text="Sortera efter betyg" onClick={sortByRating} />
+        <Button text="Sortera efter betyg" onClick={sortByRating}/>
+        
+        
+        
+        
+      
+      
     </div>
 
   );

@@ -1,0 +1,13 @@
+ul {
+    list-style: none;
+}
+
+li > span > #star {
+    height: 25px;
+    margin-left: 5px;
+}
+
+li > span > #delete {
+    height: 25px;
+    cursor: pointer;
+}
