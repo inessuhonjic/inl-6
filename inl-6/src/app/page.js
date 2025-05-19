@@ -55,8 +55,11 @@ export default function Home() {
       onRatingChange = {(e) => setRating(e.target.value)}
       onAddMovie={handleAddMovie}
       /> 
-      <Button text="I'm a button" onClick={() => {alert("Clicked!")}} />
-      <MovieList movies={movies} onRemoveMovie={handleRemoveMovie} />
+        <MovieList movies={movies} onRemoveMovie={handleRemoveMovie} />
+        <Button text="I'm a button" onClick={() => {alert("Clicked!")}} />
+        
+      
+      
     </div>
 
   );

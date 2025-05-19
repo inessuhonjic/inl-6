@@ -1,7 +1,9 @@
 'use client';
 const MovieList = ({ movies, onRemoveMovie }) => {
     return (
-    <ul>
+    <div>
+        <h3 className="text-center">Inlagda Filmer!</h3>
+        <ul>
         {movies.map((movie, index) => (
     <li className="position-relative" key={index}>
       {movie.title}
@@ -19,6 +21,8 @@ const MovieList = ({ movies, onRemoveMovie }) => {
     </li>
     ))}
     </ul>
+    </div>
+    
         
     
     
