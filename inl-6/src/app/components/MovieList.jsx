@@ -1,11 +1,10 @@
 'use client';
 const MovieList = ({ movies, onRemoveMovie }) => {
     return (
-    <div>
+    <ul>
         {movies.map((movie, index) => (
-        <div key={index}>
-      <h3>{movie.title}</h3>
-      <p>
+    <li className="position-relative" key={index}>
+      {movie.title}
         <span>{movie.rating &&
           Array.from({ length: movie.rating }, (_, i) => (
             <img key={i} src="/images/star.png" alt="star"/>
@@ -19,7 +18,9 @@ const MovieList = ({ movies, onRemoveMovie }) => {
       </p>
     </div>
     ))}
-    </div>
+    </ul>
+        
+    
     
 )};
 export default MovieList;
