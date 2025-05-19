@@ -37,7 +37,10 @@ export default function Home() {
       onAddMovie={handleAddMovie}
       /> 
       <Button text="I'm a button" onClick={() => {alert("Clicked!")}} />
-      <MovieList movies={movies} />
+      <ul>
+        <MovieList movies={movies} />
+      </ul>
+      
     </div>
 
   );
