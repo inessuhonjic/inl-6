@@ -30,10 +30,6 @@ export default function Home() {
     } else {
       alert("Ojdå, fyll i alla fält!")
     }
-      
-
-    
-    
   };
 
   const handleRemoveMovie = (index) => {
@@ -42,7 +38,28 @@ export default function Home() {
     setMovies(updatedMovies);
   };
   
+  const sortByABC = () => {
+    const sorted = [...movies].sort((a,b) => {
+    let titleA = a.title.toUpperCase();
+    let titleB = b.title.toUpperCase();
+
+    if (titleA < titleB){
+      return -1;
+    }
+    if (titleA > titleB) {
+      return 1;
+    }
+    return 0;
+  });
+  setMovies(sorted);
+  };
   
+
+
+   const sortByRating= () => {
+    const sorted = [...movies].sort((a,b) => b.rating - a.rating);
+    setMovies(sorted);
+  };
   return (
     <div className="container mt-5 w-50">
       <h1 className="text-center">Min filmlista</h1>
@@ -56,7 +73,8 @@ export default function Home() {
       onAddMovie={handleAddMovie}
       /> 
         <MovieList movies={movies} onRemoveMovie={handleRemoveMovie} />
-        <Button text="I'm a button" onClick={() => {alert("Clicked!")}} />
+        <Button text="Sortera Alfabetiskt" onClick={sortByABC} />
+        <Button text="Sortera efter betyg" onClick={sortByRating} />
         
       
       
