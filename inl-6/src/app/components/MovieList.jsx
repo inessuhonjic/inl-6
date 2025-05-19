@@ -11,6 +11,8 @@ const MovieList = ({ movies }) => {
             <img key={i} src="/images/star.png" alt="star"/>
           ))}
           </span>
+          
+          <span><img src="/images/delete.png" alt="delete"/></span>
       </p>
     </div>
     ))}
