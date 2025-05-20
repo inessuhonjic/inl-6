@@ -2,12 +2,21 @@ ul {
     list-style: none;
 }
 
-li > span > #star {
-    height: 25px;
-    margin-left: 5px;
+
+li > span > .star-icon {
+    height: auto;
+    width: 3%;
+    
+
 }
 
-li > span > #delete {
-    height: 25px;
+li > span > .delete-icon {
+    height: auto;
+    width: 25%;
     cursor: pointer;
+   
+}
+li > span > img {
+float: right;
+ margin-left: 5px;
 }
