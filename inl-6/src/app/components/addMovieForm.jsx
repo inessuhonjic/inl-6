@@ -1,6 +1,4 @@
 "use client";
-
-
 /*Komponenten Form triggar igång onAddMovie() när användaren klickar på 'Lägg till film'. 
 Komponenten tar emot 5 props: title, rating, onAddMovie, onTitleChange och onRatingChange. 
 onTitleChange och OnRatingChange är eventhanterare som uppdaterar filmlistan med hjälp av useState */

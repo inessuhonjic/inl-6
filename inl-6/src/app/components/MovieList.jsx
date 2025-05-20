@@ -8,27 +8,27 @@ const MovieList = ({ movies, onRemoveMovie }) => {
 
     <div className="container-fluid">
       <h3 className="text mt-3">Inlagda filmer</h3>
-      <ul className="list-group list-group rounded mt-3 mb-3 w-100 flex-grow-1">
+      <ul className="list-group list-group rounded mt-3 mb-3">
 
         {movies.map((movie, index) => (
-          <li className="position-relative list-group-item list-group-item-secondary lead m-1 pe-4" key={index}>
+          <li className="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center lead" key={index}>
             {movie.title}
             
-            <span className="m-3">
+            <div className="d-flex flex-wrap align-items-center gap-2 me-3">
               {movie.rating && Array.from({ length: movie.rating }, (_, i) => ( // Skapar en array med movie.rating tomma platser
                 <img key={i} 
                 src="/images/star.png" 
                 alt="star" 
-                className="star-icon img-fluid"/> // Lägger in lika många stjärnor som tomma platser i arrayen
+                className="star-icon"/> // Lägger in lika många stjärnor som tomma platser i arrayen
               ))}
-            </span>
+            
 
-            <span className="position-absolute end-0">
+            
               <img src="/images/delete.png"
-              className= "delete-icon img-fluid ms-2"
+              className= "delete-icon"
               alt="delete"
               onClick={() => onRemoveMovie(index)} // När kryssbilden klickas körs onRemoveMovie som tar bort ett listobjekt givet dess index
-            /></span>
+            /></div>
           </li>
         ))}
 
