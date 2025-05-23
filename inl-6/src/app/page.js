@@ -12,7 +12,7 @@ export default function Home() {
   const [movies, setMovies] = useState([]);
   
 
-  const handleAddMovie = (title, rating) => {
+  const AddMovie = (title, rating) => {
     /*
     handleAddMovie() anropas ifrån Form-komponenten via onAddMovie, när formuläret skickats. 
     Först kollar vi så att användaren fyllt i både titel och betyg, 
@@ -80,7 +80,7 @@ export default function Home() {
           <hr></hr>
 
           <Form  
-          onAddMovie={handleAddMovie}
+          onAddMovie={AddMovie}
           /> 
 
         <MovieList movies={movies} onRemoveMovie={handleRemoveMovie} />
