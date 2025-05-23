@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.css';
-import Form from  './components/addMovieForm';
+import Form from  './components/Form';
 import Button from './components/Button';
 import MovieList from './components/MovieList';
 
@@ -10,10 +10,9 @@ import MovieList from './components/MovieList';
 export default function Home() {
   //här skapas movie-listan i useState samt för titel och rating
   const [movies, setMovies] = useState([]);
-  const [rating, setRating] = useState("");
-  const [title, setTitle] = useState("");
+  
 
-  const handleAddMovie = () => {
+  const handleAddMovie = (title, rating) => {
     /*
     handleAddMovie() anropas ifrån Form-komponenten via onAddMovie, när formuläret skickats. 
     Först kollar vi så att användaren fyllt i både titel och betyg, 
@@ -21,6 +20,7 @@ export default function Home() {
     Till sist nollställs inputfälten.
 
     */
+   console.log(title, rating)
     if (title != "" && rating != 0) {
 
       const newMovie = {
@@ -30,8 +30,7 @@ export default function Home() {
 
     setMovies([...movies, newMovie]);
 
-    setTitle("");
-    setRating("");
+    
 
 
     } else {
@@ -81,10 +80,6 @@ export default function Home() {
           <hr></hr>
 
           <Form  
-          title={title}
-          rating={rating}
-          onTitleChange={(e) => setTitle(e.target.value)}
-          onRatingChange = {(e) => setRating(e.target.value)}
           onAddMovie={handleAddMovie}
           /> 
 

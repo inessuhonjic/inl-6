@@ -1,11 +1,18 @@
 "use client";
+import { useState } from "react";
 /*Komponenten Form triggar igång onAddMovie() när användaren klickar på 'Lägg till film'. 
 Komponenten tar emot 5 props: title, rating, onAddMovie, onTitleChange och onRatingChange. 
 onTitleChange och OnRatingChange är eventhanterare som uppdaterar filmlistan med hjälp av useState */
-function Form({ title, rating, onAddMovie, onRatingChange, onTitleChange }) {
+function Form({ onAddMovie }) {
+  const [rating, setRating] = useState("");
+  const [title, setTitle] = useState("");
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    onAddMovie();
+    onAddMovie(title, rating);
+    setTitle("")
+    setRating("")
   };
   return (
     <div>
@@ -17,7 +24,7 @@ function Form({ title, rating, onAddMovie, onRatingChange, onTitleChange }) {
             id="title-field"
             className="form-control"
             value={title}
-            onChange={onTitleChange}
+            onChange={(e) => setTitle(e.target.value)}
             placeholder="Skriv en film"
           />
 
@@ -27,7 +34,7 @@ function Form({ title, rating, onAddMovie, onRatingChange, onTitleChange }) {
             id="rating-field"
             className="form-control"
             value={rating}
-            onChange={onRatingChange}
+            onChange={(e) => setRating(e.target.value)}
             required
           >
             <option value="0">Välj betyg här...</option>
